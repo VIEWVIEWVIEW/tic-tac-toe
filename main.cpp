@@ -265,7 +265,7 @@ void print_board(char board[3][3])
 }
 
 // tictactoe takes two players. a player is a function that takes a board and returns a tuple of (x, y)
-int tictactoe(std::pair<int, int> (*player1)(char[3][3], char), std::pair<int, int> (*player2)(char[3][3], char))
+void tictactoe(std::pair<int, int> (*player1)(char[3][3], char), std::pair<int, int> (*player2)(char[3][3], char))
 {
   // create game board
   char board[3][3] = {
