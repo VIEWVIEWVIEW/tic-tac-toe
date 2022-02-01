@@ -126,7 +126,6 @@ char check_winner(char board[3][3])
 // a player takes the board and returns a tuple of the move
 std::pair<int, int> human(char board[3][3], char current_player)
 {
-  // make cursor highly visible
   int x = 0;
   int y = 0;
   int c;
@@ -265,7 +264,7 @@ void print_board(char board[3][3])
 }
 
 // tictactoe takes two players. a player is a function that takes a board and returns a tuple of (x, y)
-int tictactoe(std::pair<int, int> (*player1)(char[3][3], char), std::pair<int, int> (*player2)(char[3][3], char))
+void tictactoe(std::pair<int, int> (*player1)(char[3][3], char), std::pair<int, int> (*player2)(char[3][3], char))
 {
   // create game board
   char board[3][3] = {
